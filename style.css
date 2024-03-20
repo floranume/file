@@ -1,0 +1,49 @@
+:root{
+    --text-color : red; 
+    
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'tahoma';
+    
+
+}
+.boxhop{
+    background-color: aquamarine;
+    border: 5px dashed #333;
+    height: 800px;
+}
+.box1{
+    background-color: aqua;
+    padding: 10px 15px 11px;
+    border: 10px solid #333;
+    margin-left: 105px;
+}
+
+.box2{
+    background-image: linear-gradient(10deg, rgba(55, 131, 105, 0.4),rgba(58, 76, 177, 0.6));
+    border: 15px solid #9b4141;
+    background-clip: content-box;
+    margin:10px 20px 50px;
+    
+}
+
+.box3{
+    background:linear-gradient(0, rgba(20,90,200,0.5),rgba(0,0,300,0.5)), url(/hinh.avif) center / contain;
+    margin-left: 50px;
+    font-family: 'times new roman';
+    font-size: 100px;
+    padding: 50px;
+    box-sizing: border-box;
+    flex-direction:column-reverse;
+    color: var(--text-color);
+    
+
+    
+    
+}

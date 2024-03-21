@@ -1,49 +1,218 @@
+/* Tạo class */
+/* Ở đây cha là header không phải class, topbar là class thì chấm . */
+/* Giờ chị cho xem bố cục của header */
 :root{
-    --text-color : red; 
     
+    --hong-tone: #CD1877;
+    --hong-nhat: #f2dce9;
+    --xam-nhat: #DFD9C3;
+    --mau-den: #252525;
+    --xam-chunho: #969595;
+
+
 }
 
-.box{
-    width: 150px;
-    height: 150px;
+.row{
+    align-items: center;
+}
+header .topbar{
+    height: 30px;
+    background-image: url('image/top-bar.png');
+    background-repeat: no-repeat; /* này là không cho nó lặp lại */
+    /* Giờ cho nó căn giữa */
+    background-position: center;
+    /* Tham khảo https://www.w3schools.com/css/css_background.asp */
+}
+
+header .header{
+    /* height: 30px; */
+    /* background-color: #12bd21; */
+    /*      Trên phải dưới trái */
+    /* padding: 20px 0 20px 0;  */
+    /* Có thể viết tắt thế này, vì trên dưới bằng nhau */
+    padding: 20px 0;
+}
+
+header .navbar{
+    height: 50px;
+    background-color: #DFD9C3;
+}
+
+header .itemCha{
+    display: flex;
+    justify-content: space-between; /* này là căn đều */
+    /* Tham khảo https://viblo.asia/p/css-flexible-box-flexbox-day-du-nhat-Ljy5VDWoZra */
+}
+/* Do các item sử dụng class giống nhau, nên kế thừa */
+header .itemCha .itemCon{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* gap: 5px; */ /* này là khoảng cách giữa các ô */
+    align-items: center; /* cho các item căn giữa */
+}
+
+/* Cho cái chiều cao cố định vào cái hình item, tại vì nhiều khi các hình không bằng nhau, nó lởm chởm thì xấu */
+header .itemCha .itemCon .icon{
+    height: 36px;
+}
+
+/* Do mình muốn chỉnh các thẻ p trong .itemCon */
+header .itemCha .itemCon p{
+    margin: 0;
+}
+
+header .itemCha .itemCon p.noiDungTren{
+    font-size: 13px;
+}
+header .itemCha .itemCon p.noiDungDuoi{
+    font-weight: 600;
+}
+
+header .datLich .btn-datLich{
+    background-color: #CD1877; 
+    color: #fff;
+    width: 100%;
+    border-radius: 30px; /* bo tròn */
+    /* https://www.w3schools.com/css/css_border_rounded.asp */
+}
+
+header .iconSearch{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family:'tahoma';
+    height: 40px;
+    width: 40px;
+    border: 1px solid #b3b3b3; /* viền */
+    border-radius: 50%; /* bo tròn */
+}
+
+header .navbar .menu{
+    display: flex;
+     align-items: center;
+     justify-content: space-between; 
+     width: 100%;
+     list-style: none;
+     margin: 0;
+     
+}
+/* ttiếp đi  */
+header .navbar a{
+     color: #000000;
+     font-weight: 500;
+     text-decoration: none;
+     
+}
+
+.mainSlider{ 
+     background-size: contain;
+     width: 100%;
+}
+
+.About{
+    margin-top: 50px;
+    color: var(--xam-chunho);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
 
 }
-.boxhop{
-    background-color: aquamarine;
-    border: 5px dashed #333;
-    height: 800px;
+
+.About .About-cha{
+    display: grid;
+    align-items: center;
+    justify-items: center;  
+    margin-bottom: 50px;  
 }
-.box1{
-    background-color: aqua;
-    padding: 10px 15px 11px;
-    border: 10px solid #333;
-    margin-left: 105px;
+.About .About-cha p{
+    margin: 0;
 }
 
-.box2{
-    background-image: linear-gradient(10deg, rgba(55, 131, 105, 0.4),rgba(58, 76, 177, 0.6));
-    border: 15px solid #9b4141;
-    background-clip: content-box;
-    margin:10px 20px 50px;
+.About .About-cha .About-ND-tren{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--hong-tone);
+}
+
+
+
+.About .About-con .itemcon .nd-tren{
+    color: var(--mau-den);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.About .About-con .itemcon .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.DichVu{
+    margin: 50px;
+}
+.DichVu .DichVu-cha{
+    color: var(--xam-chunho);
+    
+    
     
 }
 
-.box3{
-    background:linear-gradient(0, rgba(20,90,200,0.5),rgba(0,0,300,0.5)), url(/hinh.avif) center / contain;
-    margin-left: 50px;
-    font-family: 'times new roman';
-    font-size: 100px;
-    padding: 50px;
-    box-sizing: border-box;
-    flex-direction:column-reverse;
-    color: var(--text-color);
-    
 
-    
-    
+.DichVu .nd-tren{
+    color: var(--hong-tone);
+    font-weight: 600;
+    font-size: 30px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
+
+/* .DichVu .nd-mid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+
+/* .DichVu .nd-duoi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* .DichVu .nd-tren,
+.DichVu .nd-mid,
+.DichVu .nd-duoi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* Làm sao mấy cái này giống nhau có thể ghi như này được nè
+thắc mắc gì nữa không? 
+
+ủa tưởng set cho cái thằng dichvu ở tren dau thuoc tinh chung dc
+chung cái g
+
+dc
+thử xem
+*/
+    .DichVu-cha{
+        /* display: flex; */
+        /* cái flex này nó ép qua hết bên trái, nên không sử dụng được */
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
+    /* dùng cái này thì được */
+    /* oke làm mò nãy h thôi về đi mai chỉ tiếp
+    ok */
+    }
+
+
